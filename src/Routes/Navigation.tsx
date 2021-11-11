@@ -5,6 +5,7 @@ import {
     NavLink
 } from "react-router-dom";
 
+import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages/index';
 import logo from '../logo.svg';
 
 export const Navigation = () => {
@@ -16,28 +17,28 @@ export const Navigation = () => {
                     <img src={ logo } alt="react logo" />
                     <ul>
                         <li>
-                            <NavLink to="/" className={({ isActive }) =>
+                            <NavLink to="/lazy1" className={({ isActive }) =>
                                 isActive ? 'nav-active' : ''
-                            } >Home</NavLink>
+                            } >Lazy 1</NavLink>
                         </li>
 
                         <li>
-                            <NavLink to="/about" className={({ isActive }) =>
+                            <NavLink to="/lazy2" className={({ isActive }) =>
                                 isActive ? 'nav-active' : ''
-                            } >About</NavLink>
+                            } >Lazy 2</NavLink>
                         </li>
 
                         <li>
-                            <NavLink to="/users" className={({ isActive }) =>
+                            <NavLink to="/lazy3" className={({ isActive }) =>
                                 isActive ? 'nav-active' : ''
-                            } >Users</NavLink>
+                            } >Lazy 3</NavLink>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
-                    <Route path="/about" element={ <h1>About</h1> } />
-                    <Route path="/users" element={ <h1>Users</h1> } />
-                    <Route path="/" element={ <h1>Home</h1> } />
+                    <Route path="/lazy1" element={ <LazyPage1 /> } />
+                    <Route path="/lazy2" element={ <LazyPage2 /> } />
+                    <Route path="/lazy3" element={ <LazyPage3 /> } />
                 </Routes>
             </div>
         </Router>
