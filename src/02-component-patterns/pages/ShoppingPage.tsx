@@ -1,5 +1,5 @@
-import ProductCard from "../components";
-
+import ProductCard from '../components';
+import '../styles/custom-styles.css';
 
 const product = {
   id: '1',
@@ -19,12 +19,30 @@ export const ShoppingPage = () => {
           flexWrap: 'wrap',
         }}
       >
-        <ProductCard product={product} >
-          <ProductCard.Image />
-
-          <ProductCard.Title />
-
-          <ProductCard.Buttons />
+        <ProductCard 
+          product={product} 
+          className="bg-dark text-white"
+        >
+          <ProductCard.Image
+            className="custom-image"
+            style={{
+              boxShadow: '5px 3px 3px #4e4e4e33'
+            }}
+          />
+          <ProductCard.Title 
+            title='Hello World' 
+            className='text-white'
+            style={{
+              fontWeight: 'bold',
+            }}
+          />
+          <ProductCard.Buttons 
+            className='custom-buttons'
+            style={{
+              display: 'flex',
+              justifyContent: 'end',
+            }}
+          />
         </ProductCard>
       </div>
     </div>
