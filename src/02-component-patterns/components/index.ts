@@ -13,3 +13,9 @@ const ProductCardObj: IProductCardObj = Object.assign( ProductCard, {
 });
 
 export default ProductCardObj;
+
+export{
+    ProductTitle,
+    ProductImage,
+    ProductButtons,
+}

@@ -23,3 +23,8 @@ export interface IProductCardObj {
     Image: (props: ProductImageProps) => JSX.Element;
     Buttons: (props: ProductButtonsPops) => JSX.Element;
 }
+
+export interface OnChangeArgs {
+    product: IProduct;
+    count: number;
+}

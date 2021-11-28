@@ -18,3 +18,9 @@
     border-color: white;
     color: white;
 }
+
+.shoping-cart{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}
