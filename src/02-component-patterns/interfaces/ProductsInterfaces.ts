@@ -9,6 +9,7 @@ export interface ProductCardContext {
     product: IProduct;
     counter: number;
     increaseBy: (value: number) => void;
+    maxCount?: number;
 }
 
 export interface IProduct {
@@ -18,7 +19,7 @@ export interface IProduct {
 }
 
 export interface IProductCardObj {
-    ({ product, children }: ProductCardProps) : JSX.Element;
+    ({ product, children }: ProductCardProps): JSX.Element;
     Title: (props: ProductTitleProps) => JSX.Element;
     Image: (props: ProductImageProps) => JSX.Element;
     Buttons: (props: ProductButtonsPops) => JSX.Element;
@@ -27,4 +28,18 @@ export interface IProductCardObj {
 export interface OnChangeArgs {
     product: IProduct;
     count: number;
+}
+
+export interface InitialValues {
+    count?: number;
+    maxCount?: number;
+}
+
+export interface ProductCartHandlers {
+    count: number;
+    isMaxCountReached: boolean;
+    maxCount?: number;
+    product: IProduct;
+    increaseBy: (value: number) => void;
+    reset: () => void;
 }
