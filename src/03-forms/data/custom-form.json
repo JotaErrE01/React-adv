@@ -1,0 +1,74 @@
+[
+    {
+        "type": "text",
+        "name": "firstName",
+        "placeholder": "First Name",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "message": "First Name is required"
+            },
+            {
+                "type": "minLength",
+                "value": 5,
+                "message": "First Name must be at least 5 characters"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "lastName",
+        "placeholder": "Last Name",
+        "label": "Last Name",
+        "value": ""
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "Email",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "message": "Email is required"
+            },
+            {
+                "type": "email",
+                "message": "Email is not valid"
+            }
+        ]
+    },
+    {
+        "type": "password",
+        "name": "password",
+        "placeholder": "Password",
+        "label": "Password",
+        "value": ""
+    },
+    {
+        "type": "password",
+        "name": "confirmPassword",
+        "placeholder": "Confirm Password",
+        "label": "Confirm Password",
+        "value": ""
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "options": [
+            {
+                "id" : "1",
+                "name": "League of Legends"
+            },
+            {
+                "id": "2",
+                "name": "Genshin Imapct"
+            }
+        ]
+    }
+]
